@@ -2,7 +2,11 @@ package primality;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.lang.Math;
-
+/*Class - This class implements the Sieve of Eratosthenes in a standalone fashion, and prompts the user
+to input an integer and displays if the number entered is prime or not.
+ @author Aliana Tejeda
+ @version 02/02/2021
+ */
 
 public class SieveOfEratosthenes {
 	//method to find prime numbers
