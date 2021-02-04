@@ -58,11 +58,12 @@ public class PolyMain {
 					out.append("x^");
 					out.append(i);
 					out.append(" + ");}
+				System.out.println("f'(x) = " + out.toString());
 			}
 			
 			out.append(list.get(0));
 			}
-			System.out.println("f'(x) = " + out.toString());
+
 		}
 	}
 
