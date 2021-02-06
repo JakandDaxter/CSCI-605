@@ -1,0 +1,19 @@
+Index: src/game/Player.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package game;\n\n/*\nThis class is an enumeration for representing the players in the Dots And Boxes game\n */\npublic enum Player {\n\n    RED(\"RED\",\"Red\"),\n    BLUE(\"BLUE\",\"Blue\"),\n    NONE(\"NONE\",\"None\");\n\n    String name;\n    String label;\n\n    //Contructor\n    Player(String name, String label){\n        this.name = name;\n        this.label = label;\n    }\n\n    //return name\n    public String getName(){\n        return this.name;\n    }\n\n    //return label\n    public String getLabel(){\n        return this.label;\n    }\n\n    /*\n        Returns an array containing the constants of this enum type,\n        in the order they are declared.\n    */\n    public static Player[] allValues(){\n        return Player.values();\n    }\n\n    /*\n        Returns the enum constant of this type with the specified name.\n        The string must match exactly an identifier used to declare an enum\n        constant in this type. (Extraneous whitespace characters are not permitted.)\n    */\n        public static Player parse(String name){\n\n            for(Player p : allValues()){ //content driven\n                if(p.getName().equals(name)){\n                    return p;\n                }\n            }\n            throw new IllegalArgumentException();\n        }\n\n\n    }\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/game/Player.java b/src/game/Player.java
+--- a/src/game/Player.java	(revision 60d1a215101b6fd0193a2a46085f1ff30a338cf3)
++++ b/src/game/Player.java	(date 1612594413868)
+@@ -12,7 +12,7 @@
+     String name;
+     String label;
+ 
+-    //Contructor
++    //Constructor
+     Player(String name, String label){
+         this.name = name;
+         this.label = label;
