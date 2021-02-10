@@ -12,9 +12,9 @@ public class Dot {
 	//Constructor
 	
 	Dot (int row, int column) {
+		assert row >= 0 && column >= 0;
 		this.row = row;
 		this.column = column;
-		
 	}
 	
 	//Get the row
@@ -42,7 +42,6 @@ public class Dot {
 		Dot Dot2 = (Dot) other;
 		return this.row == Dot2.row && this.column == Dot2.column;
 	}
-
 	public static void main (String[] arg) {
 		System.out.println("Hello World");
 	}
