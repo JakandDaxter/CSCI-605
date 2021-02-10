@@ -5,22 +5,17 @@ This class is an enumeration for representing the players in the Dots And Boxes 
  */
 public enum Player {
 
-    RED("RED","Red"),
-    BLUE("BLUE","Blue"),
-    NONE("NONE","None");
+    RED("R"),
+    BLUE("B"),
+    NONE(" ");
 
     String name;
     String label;
 
     //Contructor
-    Player(String name, String label){
-        this.name = name;
-        this.label = label;
-    }
+    Player(String label){
 
-    //return name
-    public String getName(){
-        return this.name;
+        this.label = label;
     }
 
     //return label
@@ -44,7 +39,7 @@ public enum Player {
         public static Player parse(String name){
 
             for(Player p : allValues()){ //content driven
-                if(p.getName().equals(name)){
+                if(p.getLabel().equals(name)){
                     return p;
                 }
             }
