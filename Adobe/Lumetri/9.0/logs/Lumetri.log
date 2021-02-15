@@ -1,0 +1,15 @@
+Machine:   Bems-MacBook.local in domain 
+User:      bem
+Mode:      64-Bit
+Display:   Display not detectable
+Driver:    Driver not detectable
+CPU:       Name: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+           Model: 158, Family: 6, Stepping: 10 
+           Total Threads: 12
+           Features: MMX SSE SSE2 SSE3 SSSE3 SSE4.1 SSE4.2 AVX F16C FMA AVX2 RDTSCP CLMUL AES RDRAND RDSEED POPCNT ABM BMI BMI2 ADX MOVBE
+Base path: /Applications/Adobe Premiere Rush CC/Adobe Premiere Rush.app/Contents/MacOS/
+Arguments: 
+
+17:17:47 [IrLog]           LogFile initialized
+17:17:47 [GlobalSettings]  Loading user settings from /Users/bem/Documents/Adobe/Lumetri/9.0/settings/User_Settings.xml
+17:17:47 [GlobalSettings]  Failed to load user settings, using default values.
