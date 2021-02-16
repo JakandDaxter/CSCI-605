@@ -1,5 +1,9 @@
 package hw3;
-
+/**
+* A test unit for the SubExpression class.
+*
+* @author Aliana Tejeda & Bem Lordaah
+*/
 import java.util.*;
 
 public class Interp {
@@ -76,6 +80,7 @@ public class Interp {
         }
     }
 
+    //checking if current node is a number
     public boolean isNumber(String operand) {
         try{
             Integer.parseInt(operand);

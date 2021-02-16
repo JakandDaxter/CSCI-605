@@ -2,7 +2,6 @@ package tests;
 
 import hw3.Expression;
 import hw3.IntExp;
-import org.junit.Before;
 import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
@@ -13,11 +12,6 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class TestIntExpression {
 
-    @Before
-    public void init() {
-
-
-    }
 
     @Test
     public void testIntExpression() {
@@ -25,4 +19,5 @@ public class TestIntExpression {
         assertEquals(10, root.evaluate());
         assertEquals("10", root.emit());
     }
+
 }
