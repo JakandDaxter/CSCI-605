@@ -59,6 +59,6 @@ public class TestModExpression {
                 new ModExp(new IntExp(27), new IntExp(9)),
                 new ModExp(new IntExp(9), new IntExp(27)));
         assertEquals(0, root.evaluate());
-        assertEquals("((27 % 9) / (9 % 27))", root.emit());
+        assertEquals("((27 % 9) % (9 % 27))", root.emit());
     }
 }
