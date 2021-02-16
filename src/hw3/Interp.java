@@ -4,32 +4,48 @@ import java.util.*;
 
 public class Interp {
 
-    private Expression parseExpression(String str){
+    /*
+        method to take string input and break it apart
+        by the spaces within the string input and
+        parses the input into a linked list
+     */
+    public Expression parseExpression(String str){
+        //checking if input is lengh 0 or null
         if(str == null || str.length()==0){
             return null;
         }
-
+        // assuming input is correct
+        // data is seperated by spaces
         String[] tokenArray = str.split(" ");
-
+        // create linked list for the parsed data coming form the stirng input
         LinkedList<String> tokenList = new LinkedList<>();
-
+        // for every string within the stringArray
         for(String tokenStr : tokenArray){
+            //delete the white space
             if(tokenStr.trim().length()>0){
+                //add the bare data to the linked list
                 tokenList.addLast(tokenStr);
             }
         }
-
+        //return the list of parsed data
         return parseTree(tokenList);
     }
 
-    private Expression parseTree(LinkedList<String> list){
+    /*
+        method that creates the tree using linked list
+     */
+    public Expression parseTree(LinkedList<String> list){
+        //base case: checking if the first element is an integer
+        if(isNumber(list.peekFirst())){
 
-        if(isNumber(list.get(0))){
             return new IntExp(getIntValue(list.pollFirst()));
         }
 
+        //gets the first thing in the list that is not an intenger
+        // pollFirst pops the first element out
         String currToken = list.pollFirst();
 
+        //looking for left and right elements
         Expression leftExp = parseTree(list);
 
         Expression rightExp = parseTree(list);
@@ -37,7 +53,7 @@ public class Interp {
         return getExpression(currToken,leftExp,rightExp);
     }
 
-    private Expression getExpression(String operator, Expression left, Expression right) {
+    public Expression getExpression(String operator, Expression left, Expression right) {
 
         switch (operator){
             case "+" :
@@ -60,7 +76,7 @@ public class Interp {
         }
     }
 
-    private boolean isNumber(String operand) {
+    public boolean isNumber(String operand) {
         try{
             Integer.parseInt(operand);
         }catch (NumberFormatException ex){
@@ -69,11 +85,11 @@ public class Interp {
         return true;
     }
 
-    private int getIntValue(String value){
+    public int getIntValue(String value){
         return Integer.parseInt(value);
     }
 
-    private void runInterpreter(){
+    public void runInterpreter(){
 
         boolean keepTakingExpression = true;
 
