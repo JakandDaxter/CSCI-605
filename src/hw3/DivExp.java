@@ -1,13 +1,12 @@
 package hw3;
 
 /**
- * The DivExp class evaluates expressions using the addition operator
+ * The DivExp class evaluates expressions using the division operator
  * It returns the numeric (int) value of the evaluated expression and also
  * emits a String representation of the expression
  */
 
-
-public class AddExp implements Expression {
+public class DivExp implements Expression {
 
     /**
      * Expression to the left of the operator
@@ -22,25 +21,24 @@ public class AddExp implements Expression {
     Expression right;
 
     /**
-     * Constructor for addition operation
+     * Constructor for division operation
      * @param left The left expression
      * @param right The right expression
      */
 
-    public AddExp(Expression left, Expression right) {
+    public DivExp(Expression left, Expression right) {
         this.left = left;
         this.right = right;
     }
 
-
     /**
-     *  Method to evaluate left and right expressions using the addition operator
+     *  Method to evaluate left and right expressions using the division operator
      *  @return integer value after performing division operation
      */
 
     @Override
     public int evaluate() {
-        return this.left.evaluate() + this.right.evaluate();
+        return this.left.evaluate() / this.right.evaluate();
     }
 
     /**
@@ -50,6 +48,7 @@ public class AddExp implements Expression {
 
     @Override
     public String emit() {
+
         StringBuilder str = new StringBuilder();
 
         String leftEmit = this.left.emit();
@@ -57,7 +56,7 @@ public class AddExp implements Expression {
 
         str.append('(');
         str.append(leftEmit);
-        str.append(" + ");
+        str.append(" / ");
         str.append(rightEmit);
         str.append(')');
 
@@ -74,7 +73,7 @@ public class AddExp implements Expression {
 
     /**
      * Get the left expression
-     * @return the left expression
+     * @return the right expression
      */
 
     public Expression getLeft() {

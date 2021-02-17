@@ -1,61 +1,84 @@
 package hw3;
+
 /**
-* A test unit for the SubExpression class.
-*
-* @author Aliana Tejeda & Bem Lordaah
+* CSCI 605 - Homework 3
+* @author: Aliana Tejeda & Bem Iordaah
 */
+
 import java.util.*;
+
+/**
+ * The Interp class is the main program class. It is responsible for reading a prefix expression
+ * from the standard input, generating the corresponding parse tree, and then emitting and
+ * evaluating the tree.
+ *
+ */
 
 public class Interp {
 
-    /*
-        method to take string input and break it apart
-        by the spaces within the string input and
-        parses the input into a linked list
+    /**
+     * parseExpression method receives a string input, splices it using the spaces within the string,
+     * and parses the input into a linked list
      */
+
     public Expression parseExpression(String str){
-        //checking if input is lengh 0 or null
+
+        /**
+         * check if input is length 0 or null
+         * if input is correct, separate data by spaces
+         * create linked list for parsed data coming from the string input
+         */
+
         if(str == null || str.length()==0){
             return null;
         }
-        // assuming input is correct
-        // data is seperated by spaces
+
         String[] tokenArray = str.split(" ");
-        // create linked list for the parsed data coming form the stirng input
         LinkedList<String> tokenList = new LinkedList<>();
-        // for every string within the stringArray
+
+        /**
+         * delete white space for every string within the stringArray and add
+         * bare data to the linked list
+         * @return list of parsed data
+         */
+
         for(String tokenStr : tokenArray){
-            //delete the white space
             if(tokenStr.trim().length()>0){
-                //add the bare data to the linked list
                 tokenList.addLast(tokenStr);
             }
         }
-        //return the list of parsed data
+
         return parseTree(tokenList);
     }
 
-    /*
-        method that creates the tree using linked list
+    /**
+     *  Method to create the tree using linked list
+     *  Base case: check if first element is an integer before proceeding
+     *  get first element in the list that is not an integer and pop it out
+     *  look for left and right expressions
+     *  @return IntExp
+     *  @return left and right expressions
      */
+
     public Expression parseTree(LinkedList<String> list){
-        //base case: checking if the first element is an integer
+
         if(isNumber(list.peekFirst())){
 
             return new IntExp(getIntValue(list.pollFirst()));
         }
 
-        //gets the first thing in the list that is not an intenger
-        // pollFirst pops the first element out
         String currToken = list.pollFirst();
 
-        //looking for left and right elements
         Expression leftExp = parseTree(list);
 
         Expression rightExp = parseTree(list);
 
         return getExpression(currToken,leftExp,rightExp);
     }
+
+    /**
+     *  Method to get the expressions and determine evalution class
+     */
 
     public Expression getExpression(String operator, Expression left, Expression right) {
 
@@ -67,7 +90,7 @@ public class Interp {
                 return new SubExp(left,right);
 
             case "/" :
-                return new DiviExp(left, right);
+                return new DivExp(left, right);
 
             case "%" :
                 return new ModExp(left, right);
@@ -80,7 +103,10 @@ public class Interp {
         }
     }
 
-    //checking if current node is a number
+    /**
+     *  check if current node is a number
+     */
+
     public boolean isNumber(String operand) {
         try{
             Integer.parseInt(operand);
@@ -90,9 +116,17 @@ public class Interp {
         return true;
     }
 
+    /**
+     *  Method to get integer value from string
+     */
+
     public int getIntValue(String value){
         return Integer.parseInt(value);
     }
+
+    /**
+     *  Method to receive user input and return string expressions and evaluation results
+     */
 
     public void runInterpreter(){
 
@@ -123,6 +157,9 @@ public class Interp {
         System.out.print("Goodbye!");
     }
 
+    /**
+     *  Main method
+     */
 
     public static void main(String[] args) {
 
