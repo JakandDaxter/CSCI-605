@@ -15,7 +15,7 @@ public class Diff {
             System.err.println("Usage: java lab02.Diff file1 file2");
             System.exit(1);
         }
-
+        // ill put a test here to show you
         Scanner file1 = new Scanner(new FileInputStream(args[0]));
         Scanner file2 = new Scanner(new FileInputStream(args[1]));
 
