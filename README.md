@@ -32,6 +32,5 @@
 <p>This is a 3-credit semester course. You should plan to spend 10 to 14 hours on course activities each week.</p>
 <p>It is the responsibility of each student to understand fully the expectations for participation for every course in which the student is enrolled.&nbsp;</p>
 <p><strong>Important RIT Deadlines:</strong> For term dates, including add/drop and withdrawal deadlines refer to the the&nbsp;<a href="https://www.rit.edu/calendar" target="_blank" rel="noopener">RIT Calendar</a> .</p>
-<p>Use the <img src="Arrows.jpg" alt="myCourses navigation arrows" title="myCourses navigation arrows" width="45" height="25" />arrows at the top and bottom of the page to review additional syllabus information.</p>
 </body>
 </html>
