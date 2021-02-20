@@ -1,4 +1,4 @@
-# CSCI-605
+# CSCI-605 This course focuses on identifying advanced object-oriented programming concepts and implementing them in the context of specific problems. This course covers advanced concepts such as event-driven programming, design patterns, distributed and concurrent programming, and the use, design and implementation of applications. Assignments (both in class and as homework) requiring a solution to a problem and an implementation in code are an integral part of the course. Note: This course serves as a bridge course for graduate students and cannot be taken by undergraduate students without permission from the CS Undergraduate Program Coordinator.
 <html>
 <head>
 </head>
