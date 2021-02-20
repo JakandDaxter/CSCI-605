@@ -1,7 +1,7 @@
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+//test
 public class Diff {
     /**
      * Utility that compares the contents of two files and prints an error
