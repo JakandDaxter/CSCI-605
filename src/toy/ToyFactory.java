@@ -131,6 +131,20 @@ public abstract class ToyFactory {
      */
     public static IToy makeToy(int type) {
         //TODO YOUR CODE HERE
+
+        switch (type){
+            case SCOOTER:
+                return randomScooter();
+            case DOLL:
+                return randomDoll();
+            case ACTION_FIGURE:
+                return randomActionFigure();
+            case RC_CAR:
+                return randomRCCar();
+            case ROBOT:
+                return randomRobot();
+        }
+
         return null;
     }
 
@@ -144,7 +158,13 @@ public abstract class ToyFactory {
     private static IToy randomScooter() {
         // TODO YOUR CODE HERE
         // make the scooter and assign it to toy
-        return null;
+        Scooter scooter = new Scooter();
+        scooter.setName(randomString(SCOOTER_NAMES));
+        scooter.setMSRP(randomDouble(39.99,160.99));
+        scooter.setColor(randomString(SCOOTER_COLORS));
+        scooter.setWheels(randomInt(2,3));
+
+        return scooter;
     }
 
     /**
@@ -157,7 +177,13 @@ public abstract class ToyFactory {
     private static IToy randomDoll() {
         // TODO YOUR CODE HERE
         // make the doll and return it
-        return null;
+        Doll doll = new Doll();
+        doll.setName(randomString(DOLL_NAMES));
+        doll.setMSRP(randomDouble(12.99,60.99));
+        doll.setHairColor(randomString(HAIR_COLOR));
+        doll.setEyeColor(randomString(EYE_COLOR));
+
+        return doll;
     }
 
     /**
@@ -170,7 +196,14 @@ public abstract class ToyFactory {
     private static IToy randomActionFigure() {
         // TODO YOUR CODE HERE
         // make the action figure and return it
-        return null;
+        ActionFigure actionFigure = new ActionFigure();
+        actionFigure.setName(randomString(ACTION_FIGURE_PREFIXES)+" "+randomString(DOLL_NAMES));
+        actionFigure.setMSRP(randomDouble(9.99,24.99));
+        actionFigure.setHairColor(randomString(HAIR_COLOR));
+        actionFigure.setEyeColor(randomString(EYE_COLOR));
+        actionFigure.setKungFuGrip(randomBoolean());
+
+        return actionFigure;
     }
 
     /**
@@ -184,7 +217,14 @@ public abstract class ToyFactory {
     private static IToy randomRCCar() {
         // TODO YOUR CODE HERE
         // make the RC car and return it
-        return null;
+        RCCar rcCar = new RCCar();
+        rcCar.setName(randomString(RC_CAR_NAMES));
+        rcCar.setMSRP(randomDouble(19.99,159.99));
+        rcCar.setBatteryType(randomBatteryType());
+        rcCar.setNumberOfBattery(randomInt(1,10));
+        rcCar.setSpeed(randomInt(100,300));
+
+        return rcCar;
     }
 
     /**
@@ -197,7 +237,14 @@ public abstract class ToyFactory {
     private static IToy randomRobot() {
         // TODO YOUR CODE HERE
         // make the robot and return it
-        return null;
+        Robot robot = new Robot();
+        robot.setName(randomString(ROBOT_NAMES));
+        robot.setMSRP(randomDouble(25.99,699.99));
+        robot.setBatteryType(randomBatteryType());
+        robot.setNumberOfBattery(randomInt(1,10));
+        robot.setSound(randomString(ROBOT_SOUNDS));
+
+        return robot;
     }
 
     //////////////////////////////////////////////////

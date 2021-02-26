@@ -10,6 +10,7 @@ public class Diff {
      *             compare.
      * @throws FileNotFoundException If one or the other file doesn't exist.
      */
+
     public static void main(String[] args) throws FileNotFoundException {
         if(args.length != 2) {
             System.err.println("Usage: java lab02.Diff file1 file2");
