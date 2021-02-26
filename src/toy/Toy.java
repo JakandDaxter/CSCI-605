@@ -1,5 +1,7 @@
 package toy;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Random;
 
 public abstract class Toy implements IToy{
@@ -19,11 +21,11 @@ public abstract class Toy implements IToy{
         this.productCode = productUniqueCode*SEVEN_DIGIT+new Random().nextInt(999999);
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    protected void setMSRP(double MSRP) {
+    public void setMSRP(double MSRP) {
         this.MSRP = MSRP;
     }
 
@@ -37,6 +39,7 @@ public abstract class Toy implements IToy{
         return this.name;
     }
 
+
     @Override
     public double getMSRP() {
         return this.MSRP;
@@ -44,7 +47,9 @@ public abstract class Toy implements IToy{
 
     @Override
     public double getResaleValue() {
-        return this.MSRP*this.condition.getMultiplier();
+        BigDecimal bop = new BigDecimal(this.MSRP*this.condition.getMultiplier());
+        bop = bop.setScale(2, RoundingMode.HALF_UP);
+        return bop.doubleValue();
     }
 
     @Override
@@ -72,6 +77,10 @@ public abstract class Toy implements IToy{
              +" [product code="+this.productCode
              +", MSRP="+this.MSRP
              +", condition="+this.condition
-             +", resale value="+this.getResaleValue();
+             +", resale value="+String.format("%.2f",this.getResaleValue());
+    }
+
+    public void setProductCode(int productCode) {
+        this.productCode = productCode;
     }
 }

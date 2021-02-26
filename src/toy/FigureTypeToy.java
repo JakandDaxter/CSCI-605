@@ -13,7 +13,7 @@ public abstract class FigureTypeToy extends Toy{
         return hairColor;
     }
 
-    protected void setHairColor(String hairColor) {
+    public void setHairColor(String hairColor) {
         this.hairColor = hairColor;
     }
 
@@ -21,7 +21,7 @@ public abstract class FigureTypeToy extends Toy{
         return eyeColor;
     }
 
-    protected void setEyeColor(String eyeColor) {
+    public void setEyeColor(String eyeColor) {
         this.eyeColor = eyeColor;
     }
 

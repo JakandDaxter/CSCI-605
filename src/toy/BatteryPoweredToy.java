@@ -21,7 +21,7 @@ public abstract class BatteryPoweredToy extends Toy {
         return batteryType;
     }
 
-    protected void setBatteryType(BatteryType batteryType) {
+    public void setBatteryType(BatteryType batteryType) {
         this.batteryType = batteryType;
     }
 
@@ -29,7 +29,7 @@ public abstract class BatteryPoweredToy extends Toy {
         return numberOfBattery;
     }
 
-    protected void setNumberOfBattery(int numberOfBattery) {
+    public void setNumberOfBattery(int numberOfBattery) {
         this.numberOfBattery = numberOfBattery;
     }
 
