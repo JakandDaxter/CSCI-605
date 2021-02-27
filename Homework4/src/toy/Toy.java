@@ -4,17 +4,25 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
 
+/**
+ * The Toy abstract class is a super class that implements the IToy interface
+ * Class methods are directly implemented by the BatteryPoweredToy, FigureTypeToy, and Scooter subclasses
+ * Access modifiers are set at protected levels to ensure integrity
+ */
+
 public abstract class Toy implements IToy{
 
     private final int SEVEN_DIGIT = 1000000;
-
     private int productCode;
-
     private String name;
-
     private double MSRP;
-
     private Condition condition;
+
+    /**
+     * Constructor for Toy abstract class
+     * @param
+     * @param productUniqueCode
+     */
 
     protected Toy(int productUniqueCode){
         this.condition = Condition.MINT;

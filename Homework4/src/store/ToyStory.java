@@ -41,7 +41,6 @@ public class ToyStory {
 
     //
 
-
     public static void main(String[] args) {
         /*if (args.length != 1) {
             System.err.println("usage: java store.ToyStory <number of toys>");
