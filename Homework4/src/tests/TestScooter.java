@@ -24,7 +24,8 @@ public class TestScooter {
         scooter.setWheels(2);
     }
 
-    //****Testing Condition***\\
+    /***Testing Condition***/
+
     @Test
     public void testCondition(){
         assertEquals(scooter.getCondition(), Condition.MINT);
@@ -32,7 +33,8 @@ public class TestScooter {
         assertEquals(scooter.getCondition(),Condition.NEAR_MINT);
     }
 
-    //****Testing Odometer***\\
+    /***Testing Odometer***/
+
     @Test
     public void testOdometer(){
         assertEquals( 0,scooter.getOdometer());
@@ -48,13 +50,15 @@ public class TestScooter {
         assertEquals(10,scooter.getOdometer());
     }
 
-    //****Testing ToString***\\
+    /***Testing ToString***/
+
     @Test
     public void testToString(){
         assertEquals("Mongoose Expo [product code=9654949, MSRP=160.99, condition=MINT, resale value=160.99 color=Blue, wheels=TWO, odometer=0]",scooter.toString());
     }
 
-    //****Testing Odometer***\\
+    /***Testing Odometer***/
+
     @Test
     public void testResaleValue(){
         BigDecimal bop = BigDecimal.valueOf(Condition.NEAR_MINT.getMultiplier() * 160.99);

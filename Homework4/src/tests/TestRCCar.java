@@ -28,7 +28,8 @@ public class TestRCCar {
         car.setSpeed(300);
     }
 
-    //****Testing Condition***\\
+    /***Testing Condition***/
+
     @Test
     public void testCondition(){
         assertEquals(car.getCondition(), Condition.MINT);
@@ -36,13 +37,15 @@ public class TestRCCar {
         assertEquals(car.getCondition(),Condition.NEAR_MINT);
     }
 
-    //****Testing ToString***\\
+    /***Testing ToString***/
+
     @Test
     public void testToString(){
         assertEquals("Gizmovine RC [product code=6129624, MSRP=159.99, condition=MINT, resale value=159.99, battery type=D, number of batteries=10, battery level=100, speed=300]",car.toString());
     }
 
-    //****Testing Odometer***\\
+    /***Testing Odometer***/
+
     @Test
     public void testResaleValue(){
         BigDecimal bop = BigDecimal.valueOf(Condition.NEAR_MINT.getMultiplier() * 159.99);

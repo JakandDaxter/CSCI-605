@@ -26,7 +26,8 @@ public class TestActionFigure {
         figure.setKungFuGrip(true);
     }
 
-    //****Testing Condition***\\
+    /****Testing Condition***/
+
     @Test
     public void testCondition(){
         assertEquals(figure.getCondition(), Condition.MINT);
@@ -34,13 +35,15 @@ public class TestActionFigure {
         assertEquals(figure.getCondition(),Condition.NEAR_MINT);
     }
 
-    //****Testing ToString***\\
+    /****Testing ToString***/
+
     @Test
     public void testToString(){
         assertEquals("Bruce [product code=5654949, MSRP=24.99, condition=MINT, resale value=24.99 hair color=Blond, eye=Green, kung-fu grip=true]",figure.toString());
     }
 
-    //****Testing Odometer***\\
+    /****Testing Odometer***/
+
     @Test
     public void testResaleValue(){
         BigDecimal bop = BigDecimal.valueOf(Condition.NEAR_MINT.getMultiplier() * 24.99);

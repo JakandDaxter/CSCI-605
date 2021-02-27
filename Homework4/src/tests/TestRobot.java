@@ -27,8 +27,8 @@ public class TestRobot {
 
     }
 
+    /***Testing Condition***/
 
-    //****Testing Condition***\\
     @Test
     public void testCondition(){
         assertEquals(robot.getCondition(), Condition.MINT);
@@ -36,13 +36,16 @@ public class TestRobot {
         assertEquals(robot.getCondition(),Condition.NEAR_MINT);
     }
 
-    //****Testing ToString***\\
+    /***Testing ToString***/
+
+
     @Test
     public void testToString(){
         assertEquals("Mechagodzilla [product code=7119915, MSRP=699.99, condition=MINT, resale value=699.99, battery type=AAA, number of batteries=10, battery level=100, sound=Bzzzzzt!]",robot.toString());
     }
 
-    //****Testing Odometer***\\
+    /***Testing Odometer***/
+
     @Test
     public void testResaleValue(){
         BigDecimal bop = BigDecimal.valueOf(Condition.NEAR_MINT.getMultiplier() * 699.99);
