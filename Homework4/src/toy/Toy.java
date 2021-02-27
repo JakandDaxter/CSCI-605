@@ -20,7 +20,7 @@ public abstract class Toy implements IToy{
 
     /**
      * Constructor for Toy abstract class
-     * @param
+     * Sets initial condition of toys, generates unique product codes
      * @param productUniqueCode
      */
 
@@ -28,6 +28,13 @@ public abstract class Toy implements IToy{
         this.condition = Condition.MINT;
         this.productCode = productUniqueCode*SEVEN_DIGIT+new Random().nextInt(999999);
     }
+
+    /**
+     * Get and set the toy name, MSRP, product code
+     * @return product code
+     * @return MSRP
+     * @return name
+     */
 
     public void setName(String name) {
         this.name = name;
@@ -47,11 +54,15 @@ public abstract class Toy implements IToy{
         return this.name;
     }
 
-
     @Override
     public double getMSRP() {
         return this.MSRP;
     }
+
+    /**
+     * Method to get resale value
+     * @return bop
+     */
 
     @Override
     public double getResaleValue() {
@@ -60,25 +71,52 @@ public abstract class Toy implements IToy{
         return bop.doubleValue();
     }
 
+    /**
+     * Get toy condition
+     * @return condition
+     */
+
     @Override
     public Condition getCondition() {
         return this.condition;
     }
 
+    /**
+     * Implement play method as defined by the IToy interface
+     */
+
     @Override
     public abstract void play();
+
+    /**
+     * Degrade condition of toy after play
+     */
 
     protected void degrade(){
         this.condition = this.condition.degrade();
     }
 
+    /**
+     * Get string representation of toy condition
+     * @return string representation of toy condition
+     */
+
     protected String getConditionString(){
         return "After plays "+this.name+" condition is "+this.condition.name();
     }
 
+    /**
+     * Print toy condition string
+     */
+
     protected void printCondition(String conditionString){
         System.out.println(conditionString);
     }
+
+    /**
+     * Get string representation of toy
+     * @return name, product code, MSRP, condition and resale value
+     */
 
     public String toString(){
         return this.name
@@ -87,6 +125,10 @@ public abstract class Toy implements IToy{
              +", condition="+this.condition
              +", resale value="+String.format("%.2f",this.getResaleValue());
     }
+
+    /**
+     * Set toy's product code
+     */
 
     public void setProductCode(int productCode) {
         this.productCode = productCode;

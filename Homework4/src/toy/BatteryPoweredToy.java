@@ -33,7 +33,6 @@ public abstract class BatteryPoweredToy extends Toy {
      * @return numberOfBattery
      */
 
-
     protected int getBatteryLevel() {
         return batteryLevel;
     }
