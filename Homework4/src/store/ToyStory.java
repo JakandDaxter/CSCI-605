@@ -38,6 +38,10 @@ public class ToyStory {
      *
      * @param args Specifies a number of toys (integer).
      */
+
+    //
+
+
     public static void main(String[] args) {
         /*if (args.length != 1) {
             System.err.println("usage: java store.ToyStory <number of toys>");
