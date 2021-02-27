@@ -61,7 +61,7 @@ public abstract class Toy implements IToy{
 
     /**
      * Method to get resale value
-     * @return bop
+     * @return bop value
      */
 
     @Override
