@@ -42,10 +42,10 @@ public class ToyStory {
     //
 
     public static void main(String[] args) {
-        /*if (args.length != 1) {
+        if (args.length != 1) {
             System.err.println("usage: java store.ToyStory <number of toys>");
             System.exit(1);
-        }*/
+        }
 
         // use the command line argument to determine the number of toys
         int numberOfToys = 10;
