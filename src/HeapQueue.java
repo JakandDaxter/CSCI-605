@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PriorityQueue;
 
 /**
  * A priority queue using a heap.  Assumes that larger numbers are higher
@@ -33,18 +32,18 @@ public class HeapQueue<T extends Comparable<T>> implements PriorityQueue<T> {
      * @param args not used
      */
 
-    public static void main(String args[]) {
-        HeapQueue<String> hq = new HeapQueue<String>();
-        hq.enqueue("Hi");
-        hq.enqueue("Hi There");
-        hq.enqueue("Apple");
-        hq.enqueue("House");
-        hq.enqueue("Dog");
-
-        while (!hq.isEmpty()) {
-            System.out.println(hq.dequeue());
-        }
-    }
+//    public static void main(String args[]) {
+//        HeapQueue<String> hq = new HeapQueue<String>();
+//        hq.enqueue("Hi");
+//        hq.enqueue("Hi There");
+//        hq.enqueue("Apple");
+//        hq.enqueue("House");
+//        hq.enqueue("Dog");
+//
+//        while (!hq.isEmpty()) {
+//            System.out.println(hq.dequeue());
+//        }
+//    }
 
     /**
      * Removes and returns the item at the front of the queue
@@ -86,7 +85,8 @@ public class HeapQueue<T extends Comparable<T>> implements PriorityQueue<T> {
      * @param index the current working index
      * @return index of child with largest priority, or -1
      */
-    private int maxChild(int index) {
+    //changed to public for interface implementation
+    public int maxChild(int index) {
         int maxc = -1;
         // children of index are 2 * index + 1, 2 * index + 2
         // if first child exists, is it higher than me?
