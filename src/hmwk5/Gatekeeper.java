@@ -1,9 +1,10 @@
-import java.util.InputMismatchException;
+package hmwk5;
+
 import java.util.Scanner;
 
 
 /**
- * The Gatekeeper class is the program's main entry point and prompts users for input
+ * The hmwk5.Gatekeeper class is the program's main entry point and prompts users for input
  * Users would be required to select from a list of options to (1) add a patron to the club queue
  * (2) admit a patron based on certain variables (3) close the club
  */
@@ -14,7 +15,8 @@ public class Gatekeeper {
      * Create priority heap queue
      */
 
-    HeapQueue<Patron> heap = new HeapQueue<Patron>();
+    //hmwk5.HeapQueue<hmwk5.Patron> heap = new hmwk5.HeapQueue<hmwk5.Patron>();
+    LinkedQueue<Patron> heap = new LinkedQueue<Patron>();
 
     /**
      * The main class prompts users to select one of three options:
@@ -105,7 +107,7 @@ public class Gatekeeper {
         boolean regx = false;
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Patron name: ");
+        System.out.print("hmwk5.Patron name: ");
         String name =  scan.nextLine();
         scan.reset();
 

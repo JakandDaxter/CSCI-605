@@ -1,3 +1,5 @@
+package hmwk5;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +18,7 @@ public class HeapQueue<T extends Comparable<T>> implements PriorityQueue<T> {
     private List<T> theHeap;
 
     /**
-     * The constructor for the HeapQueue
+     * The constructor for the hmwk5.HeapQueue
      */
     public HeapQueue() {
         theHeap = new ArrayList<T>();
@@ -33,7 +35,7 @@ public class HeapQueue<T extends Comparable<T>> implements PriorityQueue<T> {
      */
 
 //    public static void main(String args[]) {
-//        HeapQueue<String> hq = new HeapQueue<String>();
+//        hmwk5.HeapQueue<String> hq = new hmwk5.HeapQueue<String>();
 //        hq.enqueue("Hi");
 //        hq.enqueue("Hi There");
 //        hq.enqueue("Apple");
@@ -85,8 +87,7 @@ public class HeapQueue<T extends Comparable<T>> implements PriorityQueue<T> {
      * @param index the current working index
      * @return index of child with largest priority, or -1
      */
-    //changed to public for interface implementation
-    public int maxChild(int index) {
+    private int maxChild(int index) {
         int maxc = -1;
         // children of index are 2 * index + 1, 2 * index + 2
         // if first child exists, is it higher than me?

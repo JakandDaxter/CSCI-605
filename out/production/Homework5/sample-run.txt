@@ -3,7 +3,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Jack Nicholson
+hmwk5.Patron name: Jack Nicholson
 Coolness (1-10): 7
 Regular (y/n): y
 Enter an option
@@ -11,7 +11,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Tina Turner
+hmwk5.Patron name: Tina Turner
 Coolness (1-10): 8
 Regular (y/n): y
 Enter an option
@@ -37,7 +37,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Calvin Klein
+hmwk5.Patron name: Calvin Klein
 Coolness (1-10): 6
 Regular (y/n): n
 Enter an option
@@ -45,7 +45,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Brooke Shields
+hmwk5.Patron name: Brooke Shields
 Coolness (1-10): 9
 Regular (y/n): n
 Enter an option
@@ -53,7 +53,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: John Travolta
+hmwk5.Patron name: John Travolta
 Coolness (1-10): 4
 Regular (y/n): n
 Enter an option
@@ -67,7 +67,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Michael Jackson
+hmwk5.Patron name: Michael Jackson
 Coolness (1-10): 10
 Regular (y/n): n
 Enter an option
@@ -75,7 +75,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Liza Minnelli
+hmwk5.Patron name: Liza Minnelli
 Coolness (1-10): 10
 Regular (y/n): y
 Enter an option
@@ -95,7 +95,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: James Heliotis
+hmwk5.Patron name: James Heliotis
 Coolness (1-10): 9
 Regular (y/n): y
 Enter an option
@@ -109,7 +109,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Andy Warhol
+hmwk5.Patron name: Andy Warhol
 Coolness (1-10): 6
 Regular (y/n): y
 Enter an option
@@ -117,7 +117,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Elizabeth Taylor
+hmwk5.Patron name: Elizabeth Taylor
 Coolness (1-10): 7
 Regular (y/n): n
 Enter an option
@@ -137,7 +137,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Elton John
+hmwk5.Patron name: Elton John
 Coolness (1-10): 8
 Regular (y/n): n
 Enter an option
@@ -145,7 +145,7 @@ Enter an option
 2 to Admit a patron
 3 to Close for the night (quit)
 Your choice: 1
-Patron name: Bianca Jagger
+hmwk5.Patron name: Bianca Jagger
 Coolness (1-10): 5
 Regular (y/n): n
 Enter an option

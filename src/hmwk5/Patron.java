@@ -1,6 +1,7 @@
+package hmwk5;
 
 /**
- * The Patron class implements the Comparable interface
+ * The hmwk5.Patron class implements the Comparable interface
  * It stores all patron details and compares patrons based on their coolness factor
  * Patrons with higher coolness factors are prioritized
  */
@@ -12,7 +13,7 @@ public class Patron implements Comparable<Patron> {
     private boolean regular;
 
     /**
-     * Constructor for Patron class
+     * Constructor for hmwk5.Patron class
      * @param coolness
      * @param regular
      * @param name
@@ -25,14 +26,14 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Get the Patron name
+     * Get the hmwk5.Patron name
      * @return name
      */
 
     public String getName() { return name; }
 
     /**
-     * Set the Patron name
+     * Set the hmwk5.Patron name
      * @return name
      */
 
@@ -59,7 +60,7 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Check Patron regularity
+     * Check hmwk5.Patron regularity
      * @return regular
      */
 
@@ -68,7 +69,7 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Set Patron regularity
+     * Set hmwk5.Patron regularity
      * @return regular
      */
 
