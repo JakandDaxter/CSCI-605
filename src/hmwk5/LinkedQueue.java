@@ -1,5 +1,16 @@
 package hmwk5;
 
+/**
+ * LinkedQueue class
+ *
+ * @author Aliana Tejeda & Bem Iordaah
+ *
+ * The hmwk5.LinkedQueue class extends the Comparable class and implements the
+ * PriorityQueue interface. It queues patrons using a first-in first-out approach
+ * i.e. each new patron goes to the front of the line
+ *
+ */
+
 public class LinkedQueue <T extends Comparable<T>> implements PriorityQueue<T> {
 
     class Node{
@@ -10,9 +21,11 @@ public class LinkedQueue <T extends Comparable<T>> implements PriorityQueue<T> {
             this.val = val;
         }
     }
+
     /**
-     * underlying heap storage
+     * Create head and tail nodes
      */
+
     private Node head;
     private Node tail;
 
@@ -20,10 +33,19 @@ public class LinkedQueue <T extends Comparable<T>> implements PriorityQueue<T> {
 
     }
 
+    /**
+     * Set head node to null
+     */
+
     @Override
     public boolean isEmpty() {
         return head==null;
     }
+
+    /**
+     * Method to insert higher priority patrons in front of queue
+     * Check first to see if queue is empty
+     */
 
     @Override
     public void enqueue(T toInsert) {
@@ -37,6 +59,11 @@ public class LinkedQueue <T extends Comparable<T>> implements PriorityQueue<T> {
         tail.next = newNode;
         tail = newNode;
     }
+
+    /**
+     * Method to remove highest priority patron from queue
+     * Check first to see if queue is empty before proceeding
+     */
 
     @Override
     public T dequeue() {

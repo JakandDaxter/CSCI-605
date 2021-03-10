@@ -1,6 +1,10 @@
 package hmwk5;
 
 /**
+ * Patron class
+ *
+ * @author Aliana Tejeda & Bem Iordaah
+ *
  * The hmwk5.Patron class implements the Comparable interface
  * It stores all patron details and compares patrons based on their coolness factor
  * Patrons with higher coolness factors are prioritized
@@ -13,7 +17,7 @@ public class Patron implements Comparable<Patron> {
     private boolean regular;
 
     /**
-     * Constructor for hmwk5.Patron class
+     * Constructor for Patron class
      * @param coolness
      * @param regular
      * @param name
@@ -26,14 +30,14 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Get the hmwk5.Patron name
+     * Get the patron's name
      * @return name
      */
 
     public String getName() { return name; }
 
     /**
-     * Set the hmwk5.Patron name
+     * Set the patron's name
      * @return name
      */
 
@@ -42,7 +46,7 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Get the coolness factor
+     * Get the patron's coolness factor
      * @return coolness
      */
 
@@ -51,7 +55,7 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Set the coolness factor
+     * Set the patron's coolness factor
      * @return coolness
      */
 
@@ -60,7 +64,7 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Check hmwk5.Patron regularity
+     * Check patron's regularity
      * @return regular
      */
 
@@ -69,7 +73,7 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Set hmwk5.Patron regularity
+     * Set patron's regularity
      * @return regular
      */
 
@@ -78,7 +82,7 @@ public class Patron implements Comparable<Patron> {
     }
 
     /**
-     * Method to compare Patrons to each other based on coolness factor
+     * Method to compare patrons to each other based on coolness factor
      * Patrons with higher coolness factors are prioritized for admittance
      */
 

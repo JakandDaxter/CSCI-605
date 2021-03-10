@@ -1,9 +1,19 @@
 package hmwk5;
 
+/**
+ * CSCI 605
+ * Homework 5
+ * @author Aliana Tejeda & Bem Iordaah
+ *
+ * This is a demo program to keep track of patrons waiting in line to
+ * get into New York's famous Studio 54
+ */
+
 import java.util.Scanner;
 
-
 /**
+ * Gatekeeper class
+ *
  * The hmwk5.Gatekeeper class is the program's main entry point and prompts users for input
  * Users would be required to select from a list of options to (1) add a patron to the club queue
  * (2) admit a patron based on certain variables (3) close the club
