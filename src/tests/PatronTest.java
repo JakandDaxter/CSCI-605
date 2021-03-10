@@ -14,7 +14,7 @@ import static junit.framework.TestCase.assertEquals;
 
 public class PatronTest {
 
-    Patron p;
+    Patron p , p1;
     HeapQueue h;
 
     @Test
@@ -49,22 +49,36 @@ public class PatronTest {
         assertTrue(p.isRegular());
     }
 
+    //put people in queue, take them out and make sure they are addmited in correct order
     @Test
     public void Queue() {
+        h = new HeapQueue();
         h.enqueue(new Patron(9, true, "Idris Elba"));
         h.enqueue(new Patron(6, true, "Bobby Flay"));
         h.enqueue(new Patron(10, false, "Shawn Mendez"));
         h.enqueue(new Patron(2, true, "Lebron James"));
 
         p = (Patron) h.dequeue();
+        assertEquals("Shawn Mendez", p.getName());
 
-        System.out.println(p.getName());
+        p = (Patron) h.dequeue();
+        assertEquals("Idris Elba", p.getName());
+
+        p = (Patron) h.dequeue();
+        assertEquals(6, p.getCoolness());
     }
 
 
     @Test
     public void Comparison() {
+        h = new HeapQueue();
         h.enqueue(new Patron(9, true, "Idris Elba"));
-        h.enqueue(new Patron(6, true, "Idris Elba"));
+        h.enqueue(new Patron(9, false, "Potato Head"));
+        h.enqueue(new Patron(10, true, "Cesar Milan"));
+
+        p = (Patron) h.dequeue();
+
+        assertEquals(-1, p.compareTo(p));
+
     }
 }
