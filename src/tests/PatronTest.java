@@ -56,7 +56,9 @@ public class PatronTest {
         h.enqueue(new Patron(10, false, "Shawn Mendez"));
         h.enqueue(new Patron(2, true, "Lebron James"));
 
-        h.dequeue();
+        p = (Patron) h.dequeue();
+
+        System.out.println(p.getName());
     }
 
 
