@@ -1,11 +1,11 @@
-$ java Jukebox tracks-1.txt 0
-Jukebox of 1 songs starts rockin'...
+$ java main.Jukebox tracks-1.txt 0
+main.Jukebox of 1 songs starts rockin'...
 Printing first 5 songs played...
-	Artist: Faster Pussy cat, Song: Silent Night
-	Artist: Faster Pussy cat, Song: Silent Night
-	Artist: Faster Pussy cat, Song: Silent Night
-	Artist: Faster Pussy cat, Song: Silent Night
-	Artist: Faster Pussy cat, Song: Silent Night
+	Artist: Faster Pussy cat, main.Song: Silent Night
+	Artist: Faster Pussy cat, main.Song: Silent Night
+	Artist: Faster Pussy cat, main.Song: Silent Night
+	Artist: Faster Pussy cat, main.Song: Silent Night
+	Artist: Faster Pussy cat, main.Song: Silent Night
 Simulation took 0 second/s
 Number of simulations run: 50000
 Total number of songs played: 50000
@@ -14,14 +14,14 @@ Most played song: "Silent Night" by "Faster Pussy cat"
 All songs alphabetically by "Faster Pussy cat":
 	"Silent Night" with 50000 plays
 
-$ java Jukebox tracks-10.txt 0
-Jukebox of 10 songs starts rockin'...
+$ java main.Jukebox tracks-10.txt 0
+main.Jukebox of 10 songs starts rockin'...
 Printing first 5 songs played...
-	Artist: Joseph Locke, Song: Goodbye
-	Artist: Faster Pussy cat, Song: Silent Night
-	Artist: The Sun Harbor's Chorus-Documentary Recordings, Song: Mama_ mama can't you see ?
-	Artist: Hudson Mohawke, Song: No One Could Ever
-	Artist: Yerba Brava, Song: Si Vos Querés
+	Artist: Joseph Locke, main.Song: Goodbye
+	Artist: Faster Pussy cat, main.Song: Silent Night
+	Artist: The Sun Harbor's Chorus-Documentary Recordings, main.Song: Mama_ mama can't you see ?
+	Artist: Hudson Mohawke, main.Song: No One Could Ever
+	Artist: Yerba Brava, main.Song: Si Vos Querés
 Simulation took 0 second/s
 Number of simulations run: 50000
 Total number of songs played: 183052
@@ -30,14 +30,14 @@ Most played song: "Si Vos Querés" by "Yerba Brava"
 All songs alphabetically by "Yerba Brava":
 	"Si Vos Querés" with 18374 plays
     
-$ java Jukebox tracks-100.txt 0
-Jukebox of 100 songs starts rockin'...
+$ java main.Jukebox tracks-100.txt 0
+main.Jukebox of 100 songs starts rockin'...
 Printing first 5 songs played...
-	Artist: Christian Castro, Song: Tu Vida Con La Mía
-	Artist: Finis Tasby, Song: Sitting In My Window (Finis Tasby BMI)
-	Artist: Kool Savas, Song: Fick uns
-	Artist: Sheb Wooley, Song: Mule Boogie
-	Artist: Kultiration, Song: Bakslag
+	Artist: Christian Castro, main.Song: Tu Vida Con La Mía
+	Artist: Finis Tasby, main.Song: Sitting In My Window (Finis Tasby BMI)
+	Artist: Kool Savas, main.Song: Fick uns
+	Artist: Sheb Wooley, main.Song: Mule Boogie
+	Artist: Kultiration, main.Song: Bakslag
 Simulation took 0 second/s
 Number of simulations run: 50000
 Total number of songs played: 609901
@@ -46,14 +46,14 @@ Most played song: "(Looking For) The Heart Of Saturday" by "Shawn Colvin"
 All songs alphabetically by "Shawn Colvin":
 	"(Looking For) The Heart Of Saturday" with 6279 plays
 
-$ java Jukebox tracks-1K.txt 0
-Jukebox of 1000 songs starts rockin'...
+$ java main.Jukebox tracks-1K.txt 0
+main.Jukebox of 1000 songs starts rockin'...
 Printing first 5 songs played...
-	Artist: Peter Broderick, Song: Part 5: Awaken/Panic/Restraint
-	Artist: Max Brannslokker, Song: Telze'
-	Artist: George Duke, Song: Summer Breezin'
-	Artist: Verdena, Song: La tua fretta
-	Artist: Aerosmith, Song: Cryin'
+	Artist: Peter Broderick, main.Song: Part 5: Awaken/Panic/Restraint
+	Artist: Max Brannslokker, main.Song: Telze'
+	Artist: George Duke, main.Song: Summer Breezin'
+	Artist: Verdena, main.Song: La tua fretta
+	Artist: Aerosmith, main.Song: Cryin'
 Simulation took 0 second/s
 Number of simulations run: 50000
 Total number of songs played: 1971343
@@ -62,14 +62,14 @@ Most played song: "Anyone Else But You" by "Michael Cera & Ellen Page"
 All songs alphabetically by "Michael Cera & Ellen Page":
 	"Anyone Else But You" with 2102 plays
     
-$ java Jukebox tracks-10K.txt 0
-Jukebox of 9990 songs starts rockin'...
+$ java main.Jukebox tracks-10K.txt 0
+main.Jukebox of 9990 songs starts rockin'...
 Printing first 5 songs played...
-	Artist: Vrse Murphy, Song: Perfect Game
-	Artist: Shotgun Honeymoon, Song: Labels Of Blues
-	Artist: Helen Humes, Song: He Don't Love Me Anymore
-	Artist: The Flying Burrito Brothers, Song: Take A Walk On The Edge
-	Artist: The Detroit Cobras, Song: Hittin' On Nothing
+	Artist: Vrse Murphy, main.Song: Perfect Game
+	Artist: Shotgun Honeymoon, main.Song: Labels Of Blues
+	Artist: Helen Humes, main.Song: He Don't Love Me Anymore
+	Artist: The Flying Burrito Brothers, main.Song: Take A Walk On The Edge
+	Artist: The Detroit Cobras, main.Song: Hittin' On Nothing
 Simulation took 1 second/s
 Number of simulations run: 50000
 Total number of songs played: 6230338
@@ -80,14 +80,14 @@ All songs alphabetically by "The Orioles":
 	"I Cross My Fingers" with 637 plays
 	"Once In A While" with 722 plays
     
-$ java Jukebox tracks-100K.txt 0
-Jukebox of 98853 songs starts rockin'...
+$ java main.Jukebox tracks-100K.txt 0
+main.Jukebox of 98853 songs starts rockin'...
 Printing first 5 songs played...
-	Artist: Caracoles_ Los, Song: Agosto
-	Artist: Alex Gaudino_ Featuring Alexandra Prince, Song: Just Because of You
-	Artist: Freefall Feat. Jan Johnston, Song: Skydive (I Feel Wonderful)
-	Artist: Haustor, Song: IZVOD
-	Artist: Ray Daytona And Googoobombos, Song: Hole In The Ground
+	Artist: Caracoles_ Los, main.Song: Agosto
+	Artist: Alex Gaudino_ Featuring Alexandra Prince, main.Song: Just Because of You
+	Artist: Freefall Feat. Jan Johnston, main.Song: Skydive (I Feel Wonderful)
+	Artist: Haustor, main.Song: IZVOD
+	Artist: Ray Daytona And Googoobombos, main.Song: Hole In The Ground
 Simulation took 4 second/s
 Number of simulations run: 50000
 Total number of songs played: 19637389
@@ -99,14 +99,14 @@ All songs alphabetically by "Bacio di Tosca":
 	"O wärst Du mein!" with 206 plays
 	"Scheidung" with 261 plays
     
-$ java Jukebox tracks-1M.txt 0
-Jukebox of 926096 songs starts rockin'...
+$ java main.Jukebox tracks-1M.txt 0
+main.Jukebox of 926096 songs starts rockin'...
 Printing first 5 songs played...
-	Artist: Señor Trepador, Song: Volver atras
-	Artist: RJD2, Song: Laws Of The Gods (Instrumental)
-	Artist: Daniel Johnston, Song: Too Young To Die
-	Artist: Deadmau5 & Chris Lake, Song: I Said
-	Artist: The Fabulous Les Paul & Mary Ford, Song: Goodnight_ Irene
+	Artist: Señor Trepador, main.Song: Volver atras
+	Artist: RJD2, main.Song: Laws Of The Gods (Instrumental)
+	Artist: Daniel Johnston, main.Song: Too Young To Die
+	Artist: Deadmau5 & Chris Lake, main.Song: I Said
+	Artist: The Fabulous Les Paul & Mary Ford, main.Song: Goodnight_ Irene
 Simulation took 23 second/s
 Number of simulations run: 50000
 Total number of songs played: 60087812
@@ -144,7 +144,7 @@ All songs alphabetically by "Gabor Szabo":
 	"Sealed With a Kiss" with 62 plays
 	"Some Velvet Morning" with 69 plays
 	"Somewhere I Belong" with 62 plays
-	"Song Of Love" with 81 plays
+	"main.Song Of Love" with 81 plays
 	"Sophisticated Wheels" with 74 plays
 	"Space" with 75 plays
 	"Spellbinder" with 71 plays
