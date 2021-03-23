@@ -1,0 +1,24 @@
+Welcome to the Vigenere Cipher!
+ >> help
+Enter one of the following commands:
+  list <directory> - lists the files in the specified directory
+  encode <key> <input-file> <output-file> - encode the input file into the output file using the key indicated.
+  decode <key> <input-file> <output-file> - decode the input file into the output file using the key indicated.
+  quit - quits the Vigenere Cipher.
+ >> list notreal
+Error processing most recent command!
+Path is not a directory: notreal
+ >> encode
+Error processing most recent command!
+Invalid arguments.
+ >> decode
+Error processing most recent command!
+Invalid arguments.
+ >> encode data\AliceChapter1.txt test\AliceChapter1.nokey.txt
+Error processing most recent command!
+Invalid arguments.
+ >> encode test data\notreal.txt test\notreal.txt
+Error processing most recent command!
+data\notreal.txt (The system cannot find the file specified)
+ >> quit
+Quitting...
