@@ -6,7 +6,7 @@ import java.io.FilenameFilter;
 
 public final class VigenereUtility {
 
-    public static String listFiles(String pathname, Console console, String directory) throws VigenereException {
+    public static File[] listFiles(String pathname, Console console, String directory) throws VigenereException {
         File directoryPath = new File(String.valueOf(pathname));
 
         FilenameFilter textFilefilter = (dir, name) -> {
@@ -19,14 +19,11 @@ public final class VigenereUtility {
         console.writer().println("Listing files in " + directory + "...");
 
         if (filesList != null) {
-            for (File file : filesList) {
-                return file.getAbsolutePath();
-            }
+                return filesList;
         } else {
             throw new VigenereException("Path is not a directory: " + directory);
         }
 
-        return "";
     }
 
     public static void encode(String keyword, String targetPath, String destinationPath){

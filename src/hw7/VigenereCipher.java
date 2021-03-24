@@ -1,6 +1,7 @@
 package hw7;
 
 import java.io.Console;
+import java.io.File;
 import java.util.Scanner;
 
 
@@ -31,7 +32,9 @@ public class VigenereCipher {
                         StringBuilder sb = new StringBuilder("/Users/MS1/Documents/CSCI Homeworks/Homework 7/src/hw7/");
                         try {
                             sb.append(splited[1]);
-                            console.writer().println(VigenereUtility.listFiles(String.valueOf(sb), console, splited[1]));
+                            for (File file : VigenereUtility.listFiles(String.valueOf(sb), console, splited[1])) {
+                                console.writer().println(" "+ file.getAbsolutePath());
+                            }
                         } catch (ArrayIndexOutOfBoundsException | VigenereException e) {
                             console.writer().println("Error processing most recent command!");
                         }
