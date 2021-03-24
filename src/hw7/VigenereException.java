@@ -1,4 +1,7 @@
 package hw7;
 
-public class VigenereException {
+import java.io.IOException;
+
+public class VigenereException extends IOException {
+
 }

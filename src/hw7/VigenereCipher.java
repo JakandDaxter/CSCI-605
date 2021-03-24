@@ -18,12 +18,12 @@ public class VigenereCipher {
             String option = scanner.nextLine();
             switch(option) {
                 case "help":
-                    console.writer().println(""" 
+                 /*   console.writer().println("""
                               Enter one of the following commands:                           
                                 list <directory> - lists the files in the specified directory
                                 encode <key> <input-file> <output-file> - encode the input file into the output file using the key indicated.
                                 decode <key> <input-file> <output-file> - decode the input file into the output file using the key indicated.
-                                quit - quits the Vigenere Cipher.""");
+                                quit - quits the Vigenere Cipher.""");*/
                     break;
                 case "list":
                     File directoryPath = new File("D:/Users/MS1/Documents/CSCI Homeworks/Homework 7/provided_files/data");
