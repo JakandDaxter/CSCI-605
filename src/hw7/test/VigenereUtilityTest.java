@@ -17,6 +17,7 @@ public class VigenereUtilityTest {
         assertEquals(VigenereUtility.decodeChar(ENCODED_STRING.charAt(0),key.charAt(0)),'A');
     }
 
+    @Test
     public void encodeChar(){
         assertEquals(VigenereUtility.encodeChar(DECODED_STRING.charAt(0),key.charAt(0)),'L');
     }
@@ -40,8 +41,9 @@ public class VigenereUtilityTest {
 
     @Test
     public void getKeyChar(){
-        assertEquals(VigenereUtility.getKeyChar(key,7),'E');
-        assertEquals(VigenereUtility.getKeyChar(key,9),'0');
+        assertEquals(VigenereUtility.getKeyChar(key,0),'L');
+        assertEquals(VigenereUtility.getKeyChar(key,7),'M');
+        assertEquals(VigenereUtility.getKeyChar(key,9),'N');
     }
 
     @Test

@@ -1,7 +1,7 @@
 package hw7.main;
 
-import java.io.IOException;
-
-public class VigenereException extends IOException {
-
+public class VigenereException extends Exception {
+    public VigenereException(String message) {
+        super(message);
+    }
 }
