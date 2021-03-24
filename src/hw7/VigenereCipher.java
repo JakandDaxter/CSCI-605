@@ -3,20 +3,20 @@ package hw7;
 import java.io.Console;
 import java.io.File;
 import java.io.FilenameFilter;
-import java.io.IOException;
 import java.util.Scanner;
 
 import static java.lang.System.exit;
 
 public class VigenereCipher {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args){
         Console console = System.console();
         if(console != null){
             console.writer().println("Welcome to the Vigenere Cipher!");
             do{
             Scanner scanner = new Scanner(console.reader());
             String option = scanner.nextLine();
-            switch(option) {
+            String[] splited = option.split("\\s+");
+            switch(splited[0]) {
                 case "help":
                     console.writer().println(""" 
                               Enter one of the following commands:                           
@@ -26,22 +26,28 @@ public class VigenereCipher {
                                 quit - quits the Vigenere Cipher.""");
                     break;
                 case "list":
-                    File directoryPath = new File("D:/Users/MS1/Documents/CSCI Homeworks/Homework 7/provided_files/data");
-                    FilenameFilter textFilefilter = new FilenameFilter(){
-                        public boolean accept(File dir, String name) {
+                    StringBuilder sb=new StringBuilder("/Users/MS1/Documents/CSCI Homeworks/Homework 7/src/hw7/");
+                    try{
+                        sb.append(splited[1]);
+                        File directoryPath = new File(String.valueOf(sb));
+                        FilenameFilter textFilefilter = (dir, name) -> {
                             String lowercaseName = name.toLowerCase();
-                            if (lowercaseName.endsWith(".txt")) {
-                                return true;
-                            } else {
-                                return false;
+                            return lowercaseName.endsWith(".txt");
+                        };
+                        //List of all the text files
+                        File[] filesList = directoryPath.listFiles(textFilefilter);
+                        try{
+                            console.writer().println("Listing files in "+ splited[1] +"...");
+                            assert filesList != null;
+                            for(File file : filesList) {
+                                console.writer().println("\t"+file.getAbsolutePath());
                             }
+                        }catch(NullPointerException e){
+                            console.writer().println("Path is not a directory: " + splited[1]);
                         }
-                    };
-                    //List of all the text files
-                    String filesList[] = directoryPath.list(textFilefilter);
-                    System.out.println("List of the text files in the specified directory:");
-                    for(String fileName : filesList) {
-                        System.out.println(fileName);
+                    }
+                    catch(ArrayIndexOutOfBoundsException e){
+                        console.writer().println("Error processing most recent command!");
                     }
                     break;
                 case "encode":
@@ -53,7 +59,7 @@ public class VigenereCipher {
                     exit(0);
                     break;
                 default:
-                    console.writer().println("Please Choose From Allowed Commands");
+                    console.writer().println("Error processing most recent command!");
                     break;
             }
         }while(true);
