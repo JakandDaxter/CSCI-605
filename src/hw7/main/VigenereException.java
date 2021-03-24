@@ -1,4 +1,4 @@
-package hw7;
+package hw7.main;
 
 import java.io.IOException;
 

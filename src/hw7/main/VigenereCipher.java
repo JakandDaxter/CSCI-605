@@ -1,4 +1,4 @@
-package hw7;
+package hw7.main;
 
 import java.io.Console;
 import java.io.File;
@@ -45,6 +45,7 @@ public class VigenereCipher {
                     }
                     break;
                 case "encode":
+
                     break;
                 case "decode":
                     break;
