@@ -1,0 +1,33 @@
+Welcome to the Vigenere Cipher!
+ >> help
+Enter one of the following commands:
+  list <directory> - lists the files in the specified directory
+  encode <key> <input-file> <output-file> - encode the input file into the output file using the key indicated.
+  decode <key> <input-file> <output-file> - decode the input file into the output file using the key indicated.
+  quit - quits the Vigenere Cipher.
+ >> list data
+Listing files in 'data'...
+  C:\Users\mjc\Vigenere\provided_files\data\AliceChapter1.rabbit.txt
+  C:\Users\mjc\Vigenere\provided_files\data\AliceChapter1.txt
+  C:\Users\mjc\Vigenere\provided_files\data\AliceInWonderland.caterpillar.txt
+  C:\Users\mjc\Vigenere\provided_files\data\AliceInWonderland.txt
+  C:\Users\mjc\Vigenere\provided_files\data\kublakhan.opium.txt
+  C:\Users\mjc\Vigenere\provided_files\data\kublakhan.txt
+  C:\Users\mjc\Vigenere\provided_files\data\sample_writeup.Lincoln.txt
+  C:\Users\mjc\Vigenere\provided_files\data\sample_writeup.txt
+
+ >> encode rabbit data\AliceChapter1.txt test\AliceChapter1.rabbit.txt
+Encrypted file successfully created: test\AliceChapter1.rabbit.txt(11511 bytes)
+ >> list test
+Listing files in 'test'...
+  C:\Users\mjc\Vigenere\provided_files\test\AliceChapter1.rabbit.txt
+
+ >> decode opium data\kublakhan.opium.txt test\kublakhan.txt
+File decrypted successfully: test\kublakhan.txt(149 bytes)
+ >> list test
+Listing files in 'test'...
+  C:\Users\mjc\Vigenere\provided_files\test\AliceChapter1.rabbit.txt
+  C:\Users\mjc\Vigenere\provided_files\test\kublakhan.txt
+
+ >> quit
+Quitting...
