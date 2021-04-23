@@ -1,6 +1,7 @@
 package game;
 
 import common.ConcentrationException;
+import common.ConcentrationProtocol;
 import game.ConcentrationCard;
 
 import java.util.ArrayList;
@@ -168,7 +169,11 @@ public class ConcentrationBoard {
      */
     public ConcentrationCard getCard(int row, int col) throws ConcentrationException {
         //TODO YOUR CODE HERE
-        return null;
+        //Check if the coordinates are valid.If not throw an exception
+        if(row<0 || row>=this.DIM || col<0 || col>=this.DIM)
+            throw new ConcentrationException(String.format(ConcentrationProtocol.ERROR_MSG," Invalid coordinates"));
+        //get the Card from the board and return it
+        return this.board[row][col];
     }
 
     /**
@@ -182,7 +187,39 @@ public class ConcentrationBoard {
      */
     public CardMatch reveal(int row, int col) throws ConcentrationException {
         //TODO YOUR CODE HERE
-        return null;
+        //checking if the game is over and throwing an exception
+        if(gameOver())
+            throw new ConcentrationException(ConcentrationProtocol.GAME_OVER_MSG);
+        //Checking if the coordinate is incorrect and throw an exception
+        if(row<0 || row>=this.DIM || col<0 || col>=this.DIM)
+            throw new ConcentrationException(String.format(ConcentrationProtocol.ERROR_MSG," Invalid coordinates"));
+        //Check if the card is already revealed and throw an exception
+        if(!this.board[row][col].isHidden())
+            throw new ConcentrationException(String.format(ConcentrationProtocol.ERROR_MSG," Card already revealed"));
+        //getting the Card from the board
+        ConcentrationCard card1 = this.board[row][col];
+        //revealing the card
+        card1.reveal();
+        //checking if there is a revealed card already available for comparison
+        if(this.revealedCard == null){
+            //If not affect the card retrieved from the board to the revealedCard
+            this.revealedCard = card1;
+            //return the cardMatch in a non ready state
+            return new CardMatch(card1,null,false);
+        }
+        //affect the revealed card to a new variable
+        ConcentrationCard card2 = this.revealedCard;
+        //affecting null to revealedCard so we can use it later
+        this.revealedCard = null;
+        //if both cards matches then increase the matches count
+        if(card1.equals(card2)){
+            matches+=2;
+            return new CardMatch(card1,card2,true);
+        }
+        //hide the cards when there is a mismatch
+        card1.hide();
+        card2.hide();
+        return new CardMatch(card1,card2,false);
     }
 
     /**
@@ -192,7 +229,8 @@ public class ConcentrationBoard {
      */
     public boolean gameOver() {
         //TODO YOUR CODE HERE
-        return false;
+        //check if the number of matches found equals the total number of cards
+        return matches == this.DIM*this.DIM;
     }
 
     /**
